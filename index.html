@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Doctor Appointment</title>
+
+  <link rel="stylesheet" href="style.css?v=1002">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Book Appointment</h1>
+
+    <input type="text" id="name" placeholder="Enter Name">
+
+    <input
+      type="number"
+      id="mobile"
+      placeholder="Enter Mobile"
+    >
+
+    <input type="number" id="age" placeholder="Enter Age">
+
+    <input type="text" id="issue" placeholder="Enter Problem">
+
+    <button id="bookBtn" onclick="bookAppointment()">
+      Book Appointment
+    </button>
+
+  </div>
+
+  <!-- POPUP -->
+
+  <div id="popup" class="popup">
+
+
+  <div class="popup-content">
+
+    <h2>Appointment Confirmed</h2>
+
+    <p id="popupToken"></p>
+    <p id="popupName"></p>
+    <p id="popupMobile"></p>
+    <p id="popupAge"></p>
+    <p id="popupIssue"></p>
+
+    <p id="popupDate"></p>
+    <p id="popupTime"></p>
+
+    <button onclick="closePopup()">
+      Close
+    </button>
+
+  </div>
+
+</div>
+
+  <script src="app.js?v=5000"></script>
+
+</body>
+
+</html>
